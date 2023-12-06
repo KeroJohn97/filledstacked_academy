@@ -2,16 +2,15 @@
 
 A new Flutter project.
 
-## Getting Started
+# run command (alternative: add those to your vscode `launch.json`)
+fvm flutter run -d chrome 
+--dart-define=API_KEY= 
+--dart-define=APP_ID= 
+--dart-define=AUTH_DOMAIN= 
+--dart-define=MESSAGING_SENDER_ID= 
+--dart-define=PROJECT_ID=
+--dart-define=STORAGE_BUCKET=
 
-This project is a starting point for a Flutter application.
+# p.s. obtain those values by creating your own Firebase project
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
+# p.s. don't forget the `google-services.json` & `GoogleService-Info.plist` files in case you need them

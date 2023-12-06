@@ -476,7 +476,8 @@ class MockDialogService extends _i1.Mock implements _i13.DialogService {
       _i9.BuildContext,
       _i14.DialogRequest<dynamic>,
       dynamic Function(_i11.DialogResponse<dynamic>),
-    )? builder,
+    )?
+        builder,
   }) =>
       super.noSuchMethod(
         Invocation.method(
@@ -519,53 +520,55 @@ class MockDialogService extends _i1.Mock implements _i13.DialogService {
         returnValueForMissingStub:
             _i8.Future<_i11.DialogResponse<dynamic>?>.value(),
       ) as _i8.Future<_i11.DialogResponse<dynamic>?>);
-  @override
-  _i8.Future<_i11.DialogResponse<T>?> showCustomDialog<T, R>({
-    dynamic variant,
-    String? title,
-    String? description,
-    bool? hasImage = false,
-    String? imageUrl,
-    bool? showIconInMainButton = false,
-    String? mainButtonTitle,
-    bool? showIconInSecondaryButton = false,
-    String? secondaryButtonTitle,
-    bool? showIconInAdditionalButton = false,
-    String? additionalButtonTitle,
-    bool? takesInput = false,
-    _i12.Color? barrierColor = const _i12.Color(2315255808),
-    bool? barrierDismissible = false,
-    String? barrierLabel = r'',
-    dynamic customData,
-    R? data,
-  }) =>
-      (super.noSuchMethod(
-        Invocation.method(
-          #showCustomDialog,
-          [],
-          {
-            #variant: variant,
-            #title: title,
-            #description: description,
-            #hasImage: hasImage,
-            #imageUrl: imageUrl,
-            #showIconInMainButton: showIconInMainButton,
-            #mainButtonTitle: mainButtonTitle,
-            #showIconInSecondaryButton: showIconInSecondaryButton,
-            #secondaryButtonTitle: secondaryButtonTitle,
-            #showIconInAdditionalButton: showIconInAdditionalButton,
-            #additionalButtonTitle: additionalButtonTitle,
-            #takesInput: takesInput,
-            #barrierColor: barrierColor,
-            #barrierDismissible: barrierDismissible,
-            #barrierLabel: barrierLabel,
-            #customData: customData,
-            #data: data,
-          },
-        ),
-        returnValue: _i8.Future<_i11.DialogResponse<T>?>.value(),
-        returnValueForMissingStub: _i8.Future<_i11.DialogResponse<T>?>.value(),
-      ) as _i8.Future<_i11.DialogResponse<T>?>);
+
+  // @override
+  // _i8.Future<_i11.DialogResponse<T>?> showCustomDialog<T, R>({
+  //   dynamic variant,
+  //   String? title,
+  //   String? description,
+  //   bool? hasImage = false,
+  //   String? imageUrl,
+  //   bool? showIconInMainButton = false,
+  //   String? mainButtonTitle,
+  //   bool? showIconInSecondaryButton = false,
+  //   String? secondaryButtonTitle,
+  //   bool? showIconInAdditionalButton = false,
+  //   String? additionalButtonTitle,
+  //   bool? takesInput = false,
+  //   _i12.Color? barrierColor = const _i12.Color(2315255808),
+  //   bool? barrierDismissible = false,
+  //   String? barrierLabel = r'',
+  //   dynamic customData,
+  //   R? data,
+  // }) =>
+  //     (super.noSuchMethod(
+  //       Invocation.method(
+  //         #showCustomDialog,
+  //         [],
+  //         {
+  //           #variant: variant,
+  //           #title: title,
+  //           #description: description,
+  //           #hasImage: hasImage,
+  //           #imageUrl: imageUrl,
+  //           #showIconInMainButton: showIconInMainButton,
+  //           #mainButtonTitle: mainButtonTitle,
+  //           #showIconInSecondaryButton: showIconInSecondaryButton,
+  //           #secondaryButtonTitle: secondaryButtonTitle,
+  //           #showIconInAdditionalButton: showIconInAdditionalButton,
+  //           #additionalButtonTitle: additionalButtonTitle,
+  //           #takesInput: takesInput,
+  //           #barrierColor: barrierColor,
+  //           #barrierDismissible: barrierDismissible,
+  //           #barrierLabel: barrierLabel,
+  //           #customData: customData,
+  //           #data: data,
+  //         },
+  //       ),
+  //       returnValue: _i8.Future<_i11.DialogResponse<T>?>.value(),
+  //       returnValueForMissingStub: _i8.Future<_i11.DialogResponse<T>?>.value(),
+  //     ) as _i8.Future<_i11.DialogResponse<T>?>);
+
   @override
   _i8.Future<_i11.DialogResponse<dynamic>?> showConfirmationDialog({
     String? title,

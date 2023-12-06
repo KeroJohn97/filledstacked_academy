@@ -52,6 +52,35 @@ class CourseChapterViewDesktop extends ViewModelWidget<CourseChapterViewModel> {
                               ? Text(viewModel.chapterId, style: ktsTitle)
                               : _CourseChapterUserNotLogged(),
                         ),
+                        if (!viewModel.hasUser)
+                          Positioned(
+                            bottom: 0.0,
+                            child: SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.65,
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  const _CourseChapterArrow(),
+                                  Column(
+                                    children: const [
+                                      CoursePriceCard(
+                                        price: '35',
+                                        discountPrice: '20',
+                                        discountPeriod: '1 Week only',
+                                      ),
+                                      GoogleSignIn(
+                                        eventName: ksCTASignInToView,
+                                        title: ksCTASignInToView,
+                                      ),
+                                      verticalSpaceSmall,
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
                       ],
                     ),
                   ),
@@ -75,6 +104,7 @@ class CourseChapterViewDesktop extends ViewModelWidget<CourseChapterViewModel> {
                     viewModel.chapter?.description ?? '...',
                     style: ktsBodyRegular.copyWith(color: kcLightGrey),
                   ),
+                  verticalSpaceSmall,
                 ],
               ),
             ),

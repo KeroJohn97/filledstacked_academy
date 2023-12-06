@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "filledstacks-academy",
+    "site": "filled-stacks-academy",
     "public": "build/web",
     "ignore": [
       "firebase.json",
@@ -10,10 +10,10 @@
     "headers": [
       {
         "source": "**/*.@(jpg|jpeg|gif|png|css|js)",
-        "headers" : [
+        "headers": [
           {
             "key": "Cache-Control",
-            "value" : "max-age=1000000"
+            "value": "max-age=1000000"
           }
         ]
       }

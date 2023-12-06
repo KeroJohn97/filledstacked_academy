@@ -28,9 +28,11 @@ class HomeViewMobile extends ViewModelWidget<HomeViewModel> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                viewModel.hasUser
-                    ? const HomeGreetUser()
-                    : const GoogleSignIn(),
+                Expanded(
+                  child: viewModel.hasUser
+                      ? const HomeGreetUser()
+                      : const GoogleSignIn(),
+                ),
               ],
             ),
             verticalSpaceLarge,

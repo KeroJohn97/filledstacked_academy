@@ -5,6 +5,7 @@ import 'package:filledstacked_academy/ui/common/app_colors.dart';
 import 'package:filledstacked_academy/ui/setup/setup_bottom_sheet_ui.dart';
 import 'package:filledstacked_academy/ui/setup/setup_dialog_ui.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,13 +16,14 @@ import 'app/app.router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   setPathUrlStrategy();
   await setupLocator(stackedRouter: stackedRouter);
   setupDialogUi();
   setupBottomSheetUi();
 
+  const appName = 'Academy Clone';
   await Firebase.initializeApp(
+    name: kIsWeb ? null : appName,
     options: const FirebaseOptions(
       apiKey: EnvironmentService.apiKey,
       appId: EnvironmentService.appId,

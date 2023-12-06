@@ -18,28 +18,31 @@ class HomeTitle extends StatelessWidget {
         desktop: CrossAxisAlignment.start,
       ),
       children: [
-        GradientText(
-          'MASTER\nFLUTTER',
-          style: GoogleFonts.openSans(
-            fontWeight: FontWeight.w800,
-            fontSize: getValueForScreenType(
-              context: context,
-              mobile: 60,
-              tablet: 80,
-              desktop: 80,
-            ),
-            height: 0.95,
-          ),
-          colors: kgTitle,
-        ).scaleOnHover().moveOnHover(
-              y: -5,
-              x: getValueForScreenType<double>(
+        Align(
+          alignment: Alignment.centerLeft,
+          child: GradientText(
+            'MASTER\nFLUTTER',
+            style: GoogleFonts.openSans(
+              fontWeight: FontWeight.w800,
+              fontSize: getValueForScreenType(
                 context: context,
-                mobile: -20,
-                tablet: 0,
-                desktop: 0,
+                mobile: 60,
+                tablet: 80,
+                desktop: 80,
               ),
+              height: 0.95,
             ),
+            colors: kgTitle,
+          ).scaleOnHover().moveOnHover(
+                y: -5,
+                x: getValueForScreenType<double>(
+                  context: context,
+                  mobile: -20,
+                  tablet: 0,
+                  desktop: 0,
+                ),
+              ),
+        ),
         Text(
           'ON THE WEB',
           style: GoogleFonts.openSans(

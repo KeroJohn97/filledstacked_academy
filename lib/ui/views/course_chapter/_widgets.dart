@@ -20,28 +20,7 @@ class _CourseChapterUserNotLogged
               )
             ],
           ),
-          const Expanded(child: SizedBox.shrink()),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            mainAxisAlignment: MainAxisAlignment.end,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              const _CourseChapterArrow(),
-              Column(
-                children: const [
-                  CoursePriceCard(
-                    price: '35',
-                    discountPrice: '20',
-                    discountPeriod: '1 Week only',
-                  ),
-                  GoogleSignIn(
-                    eventName: ksCTASignInToView,
-                    title: ksCTASignInToView,
-                  ),
-                ],
-              )
-            ],
-          ),
+          // const Expanded(child: SizedBox.shrink()),
         ],
       ),
     );
@@ -126,19 +105,20 @@ class _CourseChapterArrow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 80.0),
-      height: 300,
-      width: 800,
-      child: SvgPicture.asset(
-        'assets/sign-in-to-view.svg',
-        placeholderBuilder: (context) => Shimmer.fromColors(
-          baseColor: kcDarkGreyColor,
-          highlightColor: kcDarkGreyShimmerEndColor,
-          child: Container(
-            width: double.infinity,
-            height: double.infinity,
-            color: kcMediumGrey,
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 80.0),
+        height: MediaQuery.of(context).size.height * 0.3,
+        child: SvgPicture.asset(
+          'assets/sign-in-to-view.svg',
+          placeholderBuilder: (context) => Shimmer.fromColors(
+            baseColor: kcDarkGreyColor,
+            highlightColor: kcDarkGreyShimmerEndColor,
+            child: Container(
+              width: double.infinity,
+              height: double.infinity,
+              color: kcMediumGrey,
+            ),
           ),
         ),
       ),

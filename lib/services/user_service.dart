@@ -55,7 +55,7 @@ class UserService with ListenableServiceMixin {
   }
 
   /// Authenticates a User through Firebase using Google Provider.
-  Future<SignInResult> signInWithGoogle() async {
+  Future<SignInResult?> signInWithGoogle() async {
     log.i('Google sign in initialized');
     return handleSocialSignInResult(
       await _authenticationService.signInWithGoogle(),

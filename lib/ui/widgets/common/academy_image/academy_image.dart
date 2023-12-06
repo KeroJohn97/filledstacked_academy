@@ -25,7 +25,7 @@ class AcademyImage extends StackedView<AcademyImageModel> {
     return AnimatedCrossFade(
       firstChild: SizedBox(
         height: height,
-        width: width,
+        // width: width,
         child: Shimmer.fromColors(
           baseColor: kcDarkGreyColor,
           highlightColor: kcDarkGreyShimmerEndColor,
@@ -39,7 +39,7 @@ class AcademyImage extends StackedView<AcademyImageModel> {
       secondChild: Image.asset(
         name,
         height: height,
-        width: width,
+        // width: width,
         fit: BoxFit.cover,
       ),
       crossFadeState: viewModel.isLoadingImage
